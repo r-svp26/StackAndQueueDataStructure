@@ -1,4 +1,5 @@
-﻿using System;
+﻿using StackQueueProblem.Stack;
+using System;
 
 namespace StackQueueProblem
 {
@@ -6,7 +7,11 @@ namespace StackQueueProblem
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Welcome to Stack and Queue Data Structure Program.");
+            LinkedListStack linkedListStack = new LinkedListStack();
+            linkedListStack.Push(70);
+            linkedListStack.Push(30);
+            linkedListStack.Push(56);
+            linkedListStack.Display();
         }
     }
 }
