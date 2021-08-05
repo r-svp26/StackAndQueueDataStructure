@@ -47,5 +47,21 @@ namespace StackQueueProblem.Queue
                 Console.Write("null\n");
             }
         }
+        /// <summary>
+        /// remove element from Queue.
+        /// </summary>
+        public void Dequeue()
+        {
+            if (front == null)
+            {
+                Console.WriteLine("Queue is empty");
+            }
+            else
+            {
+                Node temp = front;
+                front = front.next;
+                temp.next = null;
+            }
+        }
     }
 }

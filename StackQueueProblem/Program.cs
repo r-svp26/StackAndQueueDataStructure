@@ -38,6 +38,10 @@ namespace StackQueueProblem
             queue.Enqueue(30);
             queue.Enqueue(70);
             queue.Display();
+            Console.WriteLine("----------------------------");
+            queue.Dequeue();
+            queue.Display();
+            Console.WriteLine("----------------------------");
         }
         /// <summary>
         /// entry point of the application.
