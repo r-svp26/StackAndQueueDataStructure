@@ -40,8 +40,49 @@ namespace StackQueueProblem.Stack
             }
             while (temp != null)
             {
-                Console.WriteLine(temp.data+ " ");
+                Console.WriteLine(temp.data + " ");
                 temp = temp.next;
+            }
+        }
+        /// <summary>
+        /// display the top element of the stack.
+        /// </summary>
+        public void Peek()
+        {
+            if (top == null)
+            {
+                Console.WriteLine("Stack is empty");
+                return;
+            }
+            Console.WriteLine("{0} is Peek element of Stack", top.data);
+        }
+        /// <summary>
+        /// remove the top element from stack.
+        /// </summary>
+        public void Pop()
+        {
+            if (top == null)
+            {
+                Console.WriteLine("Stack is empty");
+                return;
+            }
+            Console.WriteLine("{0} is Poped from the Stack", top.data);
+            top = top.next;
+        }
+        /// <summary>
+        /// It will poped out all the elements from stack untill stack is empty.
+        /// </summary>
+        public void ISEmpty()
+        {
+            if (top == null)
+            {
+                Console.WriteLine("Stack is empty");
+                return;
+            }
+            while (top != null)
+            {
+                Peek();
+                Pop(); 
             }
         }
     }
