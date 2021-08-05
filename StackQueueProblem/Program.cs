@@ -1,13 +1,18 @@
-﻿using StackQueueProblem.Stack;
+﻿using StackQueueProblem.Queue;
+using StackQueueProblem.Stack;
 using System;
 
 namespace StackQueueProblem
 {
     class Program
     {
-        static void Main(string[] args)
+        static readonly LinkedListStack linkedListStack = new LinkedListStack();
+        static readonly LinkedListQueue queue = new LinkedListQueue();
+        /// <summary>
+        /// perform the stack operations.
+        /// </summary>
+        public static void StackMenu()
         {
-            LinkedListStack linkedListStack = new LinkedListStack();
             linkedListStack.Push(70);
             linkedListStack.Push(30);
             linkedListStack.Push(56);
@@ -23,6 +28,25 @@ namespace StackQueueProblem
             Console.WriteLine("----------------------------");
             linkedListStack.Display();
             Console.WriteLine("----------------------------");
+        }
+        /// <summary>
+        /// perform the queue operations.
+        /// </summary>
+        public static void QueueMenu()
+        {
+            queue.Enqueue(56);
+            queue.Enqueue(30);
+            queue.Enqueue(70);
+            queue.Display();
+        }
+        /// <summary>
+        /// entry point of the application.
+        /// </summary>
+        /// <param name="args"></param>
+        static void Main(string[] args)
+        {
+            Program.StackMenu();
+            Program.QueueMenu();
         }
     }
 }
